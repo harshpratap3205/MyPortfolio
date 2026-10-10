@@ -163,41 +163,3 @@ I have modified the GSAP Club plugins using trial versions.
 For official GSAP Club plugins, refer here:  
 https://gsap.com/docs/v3/Installation/
 
----
-
-## 🎨 Assets Usage Notice
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-- The original 3D avatar used on the live portfolio is **NOT** included in this repository.
-- That avatar is a custom asset created over ~1 month.
-- It is not open source and not available for reuse.
-
-Any usage, extraction, or redistribution of that avatar from the live website is strictly prohibited.
-
----
-
-## ⚠️ Usage Notice
-
-This project is shared for learning purposes only.
-
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.  
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
-
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.  
-See the [LICENSE](LICENSE) file for full details.
-#   M y P o r t f o l i o  
- 

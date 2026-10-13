@@ -1,6 +1,5 @@
 
 import { PropsWithChildren, useEffect, useState } from "react";
-import { PropsWithChildren,  useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
 import Contact from "./Contact";

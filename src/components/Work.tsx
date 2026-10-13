@@ -78,21 +78,33 @@ const projects: Project[] = [
 
 const Work = () => {
   useGSAP(() => {
-    const workFlex = document.querySelector(".work-flex") as HTMLElement;
+    const workSection = document.querySelector(".work-section") as HTMLElement;
     const workContainer = document.querySelector(".work-container") as HTMLElement;
+    const workFlex = document.querySelector(".work-flex") as HTMLElement;
+    if (!workSection || !workContainer || !workFlex) return;
 
-    const getTranslateX = () => {
-      if (!workFlex || !workContainer) return 1200;
-      const scrollDistance = workFlex.scrollWidth - workContainer.clientWidth;
-      return Math.max(scrollDistance + 80, 400);
+    const getDistance = () => {
+      const boxes = workFlex.querySelectorAll(".work-box");
+      if (boxes.length === 0) return 0;
+      const lastBox = boxes[boxes.length - 1] as HTMLElement;
+      // Calculate true right edge of the last box inside workFlex
+      const trackEnd = lastBox.offsetLeft + lastBox.offsetWidth;
+      const containerWidth = workContainer.clientWidth;
+      // Settle Card 5 cleanly with 60px right padding inside container
+      const targetTravel = trackEnd - containerWidth + 60;
+      return Math.max(0, targetTravel);
     };
 
     let timeline = gsap.timeline({
       scrollTrigger: {
-        trigger: ".work-section",
+        trigger: workSection,
         start: "top top",
-        end: () => `+=${Math.round(getTranslateX() * 0.9)}`,
-        scrub: 1,
+        end: () => {
+          const dist = getDistance();
+          // Snappy, brisk pinned scroll duration (clamped to 500-1000px max)
+          return `+=${Math.min(Math.max(Math.round(dist * 0.85), 500), 1000)}`;
+        },
+        scrub: 0.8,
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
@@ -101,8 +113,8 @@ const Work = () => {
       },
     });
 
-    timeline.to(".work-flex", {
-      x: () => -getTranslateX(),
+    timeline.to(workFlex, {
+      x: () => -getDistance(),
       ease: "none",
     });
 
@@ -119,7 +131,7 @@ const Work = () => {
 
   return (
     <div className="work-section" id="work">
-      <div className="work-container section-container">
+      <div className="work-container">
         <h2>
           My <span>Work</span>
         </h2>

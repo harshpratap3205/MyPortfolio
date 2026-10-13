@@ -1,7 +1,9 @@
 .work-section h2 {
-  margin-top: 80px;
-  font-size: 70px;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  font-size: 60px;
   font-weight: 500;
+  letter-spacing: -0.5px;
 }
 .work-section h2 > span {
   color: var(--accentColor);
@@ -16,31 +18,38 @@
   z-index: 5;
 }
 .work-container {
-  margin: auto;
+  width: 100%;
+  max-width: var(--cMaxWidth);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   height: 100%;
   align-content: stretch;
   overflow: hidden;
+  padding-left: max(80px, 6vw);
+  padding-right: max(60px, 4vw);
+  box-sizing: border-box;
 }
 .work-flex {
   width: max-content;
   display: flex;
-  height: calc(100% - 140px);
-  max-height: calc(100vh - 140px);
+  height: calc(100% - 145px);
+  max-height: calc(100vh - 145px);
   margin-left: 0;
-  padding-right: 120px;
+  padding: 0;
   position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .work-box {
-  padding: 35px 50px;
+  padding: 28px 45px;
   display: flex;
   flex-direction: column;
-  width: 540px;
+  width: 500px;
   box-sizing: border-box;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
   flex-shrink: 0;
-  gap: 20px;
+  gap: 18px;
   justify-content: space-between;
   transition: background 0.3s ease;
 }
@@ -50,46 +59,32 @@
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;
 }
-.work-flex::before,
-.work-flex::after {
-  content: "";
-  width: calc(50000vw);
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.08);
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
-.work-flex::after {
-  top: 100%;
-}
 .work-title {
   justify-content: space-between;
   align-items: flex-start;
   display: flex;
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .work-title > div {
   text-align: right;
 }
 .work-title h3 {
-  font-size: 52px;
-  line-height: 50px;
+  font-size: 50px;
+  line-height: 48px;
   margin: 0;
   font-weight: 700;
   color: var(--accentColor);
   text-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
 }
 .work-title h4 {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
   margin: 0;
   color: #fff;
 }
 .work-category {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--accentColor);
   font-weight: 400;
   text-transform: uppercase;
@@ -104,7 +99,7 @@
   font-weight: 300;
 }
 .work-tools-section {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .work-tools-title {
   font-size: 11px;
@@ -139,7 +134,7 @@
 .work-actions {
   display: flex;
   gap: 10px;
-  margin-top: 15px;
+  margin-top: 12px;
   align-items: center;
 }
 .work-btn {
@@ -180,7 +175,7 @@
 }
 .work-card-visual {
   width: 100%;
-  height: 145px;
+  height: 140px;
   border-radius: 10px;
   background: linear-gradient(135deg, rgba(0, 240, 255, 0.08) 0%, rgba(15, 20, 30, 0.85) 100%);
   border: 1px solid rgba(0, 240, 255, 0.18);
@@ -254,49 +249,55 @@
 
 @media only screen and (max-height: 900px) {
   .work-box {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    gap: 15px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    gap: 14px;
   }
   .work-card-visual {
     height: 120px;
     padding: 12px;
   }
   .work-section h2 {
-    font-size: 55px;
-    margin-bottom: 20px;
-    margin-top: 60px;
+    font-size: 52px;
+    margin-bottom: 18px;
+    margin-top: 48px;
   }
 }
 @media only screen and (max-width: 1400px) {
+  .work-container {
+    padding-left: 70px;
+    padding-right: 40px;
+  }
   .work-box {
-    width: 480px;
-    padding: 30px 40px;
+    width: 440px;
+    padding: 24px 32px;
   }
   .work-title h3 {
     font-size: 42px;
   }
   .work-title h4 {
-    font-size: 21px;
+    font-size: 20px;
   }
   .work-description {
     font-size: 13px;
   }
-  .work-flex {
-    margin-left: -20px;
-    padding-right: 60px;
-  }
   .work-section h2 {
-    font-size: 50px;
+    font-size: 46px;
+    margin-top: 45px;
+    margin-bottom: 16px;
   }
 }
 @media only screen and (max-width: 1100px) {
+  .work-container {
+    padding-left: 60px;
+    padding-right: 30px;
+  }
   .work-box {
-    width: 400px;
-    padding: 25px 30px;
+    width: 380px;
+    padding: 20px 24px;
   }
   .work-title h3 {
-    font-size: 36px;
+    font-size: 34px;
   }
   .work-title h4 {
     font-size: 18px;
@@ -305,22 +306,28 @@
     height: 110px;
   }
 }
-@media only screen and (max-height: 650px) {
+@media only screen and (max-height: 700px) {
   .work-section h2 {
     font-size: 36px;
-    margin-bottom: 15px;
-    margin-top: 40px;
+    margin-bottom: 12px;
+    margin-top: 35px;
   }
   .work-box {
-    gap: 12px;
+    gap: 10px;
   }
   .work-card-visual {
     height: 90px;
   }
 }
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 900px) {
   .work-container {
-    align-content: normal;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-x: auto;
+  }
+  .work-section {
+    height: auto;
+    min-height: 100vh;
   }
   .work-flex {
     height: auto;

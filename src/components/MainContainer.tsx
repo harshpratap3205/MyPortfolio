@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { PropsWithChildren, useEffect, useState } from "react";
+=======
+import { PropsWithChildren,  useEffect, useState } from "react";
+>>>>>>> 2b0cfb46e9d38e5587f82cd7323401a8c7666e62
 import About from "./About";
 import Career from "./Career";
 import Contact from "./Contact";

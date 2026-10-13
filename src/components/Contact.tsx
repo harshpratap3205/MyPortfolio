@@ -1,4 +1,5 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { FaPhone, FaEnvelope } from "react-icons/fa6";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -8,15 +9,21 @@ const Contact = () => {
         <h3>Contact</h3>
         <div className="contact-flex">
           <div className="contact-box">
-            <h4>Email</h4>
+            <h4>
+              <FaEnvelope style={{ marginRight: "8px", verticalAlign: "middle" }} />
+              Email
+            </h4>
             <p>
               <a href="mailto:harshpratap122436@gmail.com" data-cursor="disable">
                 harshpratap122436@gmail.com
               </a>
             </p>
-            <h4>Phone</h4>
+            <h4>
+              <FaPhone style={{ marginRight: "8px", verticalAlign: "middle" }} />
+              Phone
+            </h4>
             <p>
-              <a href="tel:+918178604608" data-cursor="disable">
+              <a href="tel:+918178604608" data-cursor="disable" style={{ fontWeight: 500, letterSpacing: "0.5px" }}>
                 +91 8178604608
               </a>
             </p>

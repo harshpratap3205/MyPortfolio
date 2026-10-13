@@ -1,8 +1,7 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
+  FaPhone,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -70,8 +69,12 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <FaInstagram />
+          <a
+            href="tel:+918178604608"
+            title="Call: +91 8178604608"
+            data-cursor="disable"
+          >
+            <FaPhone />
           </a>
         </span>
       </div>

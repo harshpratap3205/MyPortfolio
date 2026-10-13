@@ -3,7 +3,7 @@ import { RGBELoader } from "three-stdlib";
 import { gsap } from "gsap";
 
 const setLighting = (scene: THREE.Scene) => {
-  const directionalLight = new THREE.DirectionalLight(0xc7a9ff, 0);
+  const directionalLight = new THREE.DirectionalLight(0x00e5ff, 0);
   directionalLight.intensity = 0;
   directionalLight.position.set(-0.47, -0.32, -1);
   directionalLight.castShadow = true;
@@ -13,18 +13,18 @@ const setLighting = (scene: THREE.Scene) => {
   directionalLight.shadow.camera.far = 50;
   scene.add(directionalLight);
 
-  const pointLight = new THREE.PointLight(0xc2a4ff, 0, 100, 3);
+  const pointLight = new THREE.PointLight(0x00f0ff, 0, 100, 3);
   pointLight.position.set(3, 12, 4);
   pointLight.castShadow = true;
   scene.add(pointLight);
 
-  // Cyan / Teal rim light on character right (matching reference image)
-  const cyanRimLight = new THREE.DirectionalLight(0x00e5ff, 0);
+  // Cyan rim light on character right
+  const cyanRimLight = new THREE.DirectionalLight(0x00f0ff, 0);
   cyanRimLight.position.set(5, 14, 6);
   scene.add(cyanRimLight);
 
-  // Soft Violet / Lavender rim light on character left (matching reference image)
-  const violetRimLight = new THREE.DirectionalLight(0x9b5de5, 0);
+  // Azure rim light on character left
+  const violetRimLight = new THREE.DirectionalLight(0x00a8ff, 0);
   violetRimLight.position.set(-5, 14, 4);
   scene.add(violetRimLight);
 

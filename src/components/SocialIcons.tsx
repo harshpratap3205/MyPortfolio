@@ -1,11 +1,7 @@
 import {
   FaGithub,
   FaLinkedinIn,
-<<<<<<< HEAD
   FaPhone,
-=======
-
->>>>>>> 2b0cfb46e9d38e5587f82cd7323401a8c7666e62
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
